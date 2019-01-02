@@ -1,17 +1,17 @@
 pipeline {
     agent any 
     stages {
-        stage('...clone...') { 
+        stage('build') { 
             steps {
                 sh "mvn clean" 
             }
         }
-        stage('Test') { 
+        stage('test' { 
             steps {
                 sh "mvn test"
             }
         }
-        stage('Deploy') { 
+        stage('deploy') { 
             steps {
                 sh "mvn package" 
            }
